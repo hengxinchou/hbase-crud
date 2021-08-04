@@ -1,4 +1,4 @@
-package com.hengxin;
+package com.hengxin.bigdata;
 
 import org.apache.hadoop.hbase.Cell;
 import org.apache.hadoop.hbase.TableName;
@@ -11,12 +11,12 @@ import java.util.List;
 /**
  * @author: zhouhengxin
  * @create: 2021-08-04 00:09
+ * 打印表所有数据
  **/
 public class ScanTable {
-    public static void scan(String tableName) throws IOException {
-        HbaseConnection.initAdmin();
-        Connection conn = HbaseConnection.connection;
-        Table table = conn.getTable(TableName.valueOf(tableName));
+    public static void scan(Connection connection, String tableName) throws IOException {
+        Admin admin = connection.getAdmin();
+        Table table = connection.getTable(TableName.valueOf(tableName));
         Scan scan = new Scan();
         ResultScanner scanner = table.getScanner(scan);
         Result tmp;

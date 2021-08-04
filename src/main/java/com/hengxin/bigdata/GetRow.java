@@ -1,4 +1,4 @@
-package com.hengxin;
+package com.hengxin.bigdata;
 
 import org.apache.hadoop.hbase.Cell;
 import org.apache.hadoop.hbase.HBaseIOException;
@@ -14,12 +14,12 @@ import java.util.List;
 /**
  * @author: zhouhengxin
  * @create: 2021-08-04 00:06
+ * 获取某一行的数据
  **/
 public class GetRow {
-    public static void printRowValue(String tableName, String rowKey, String... columnFamilyAndColumn) throws IOException {
-        HbaseConnection.initAdmin();
-        Connection conn = HbaseConnection.connection;
-        Table table = conn.getTable(TableName.valueOf(tableName));
+    public static void printRowValue(Connection connection, String tableName, String rowKey,
+                                     String... columnFamilyAndColumn) throws IOException {
+        Table table = connection.getTable(TableName.valueOf(tableName));
         Get get = new Get(rowKey.getBytes());
         if (columnFamilyAndColumn == null) {
             //列簇和列暂时不加
@@ -40,7 +40,6 @@ public class GetRow {
             String family = new String(cells.get(i).getFamilyArray());
             System.out.println(row + "\t\t" + family);
         }
-        HbaseConnection.close();
     }
 }
 
