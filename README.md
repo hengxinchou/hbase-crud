@@ -26,5 +26,15 @@ hbase shell 里查不到rowKey为 **"row5"** 了。
 hbase shell 查不到 **"zhouhengxin:student"** 这个表了
 ![img_12.png](截图/img_12.png)
 
+# 备注
+
+要在 hosts 添加 ip域名绑定才能跑得起来，主要是Zookeeper的ip
+
+```shell
+47.101.206.249 jikehadoop01
+47.101.216.12  jikehadoop02
+47.101.204.23  jikehadoop03
+```
+
 
 
