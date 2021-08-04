@@ -35,11 +35,11 @@ public class PutRowTest {
             PutRow.insert(connection, "zhouhengxin:student", "row4", "score", "understanding", "60");
             PutRow.insert(connection, "zhouhengxin:student", "row4", "score", "programming", "61");
 
-            PutRow.insert(connection, "zhouhengxin:student", "row3", "name", "", "Zhouhengxin");
-            PutRow.insert(connection, "zhouhengxin:student", "row3", "info", "student_id", "G20210735010242");
-            PutRow.insert(connection, "zhouhengxin:student", "row3", "info", "class", "3");
-            PutRow.insert(connection, "zhouhengxin:student", "row3", "score", "understanding", "90");
-            PutRow.insert(connection, "zhouhengxin:student", "row3", "score", "programming", "90");
+            PutRow.insert(connection, "zhouhengxin:student", "row5", "name", "", "Zhouhengxin");
+            PutRow.insert(connection, "zhouhengxin:student", "row5", "info", "student_id", "G20210735010242");
+            PutRow.insert(connection, "zhouhengxin:student", "row5", "info", "class", "3");
+            PutRow.insert(connection, "zhouhengxin:student", "row5", "score", "understanding", "90");
+            PutRow.insert(connection, "zhouhengxin:student", "row5", "score", "programming", "90");
 
         } catch (IOException e) {
             e.printStackTrace();

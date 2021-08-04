@@ -10,7 +10,7 @@ public class DeleteRowTest {
     @Test
     public void deleteRow() {
         try (Connection connection = HbaseInit.createConnection()){
-            DeleteRow.deleteRow(connection, "zhouhengxin:student", "row1");
+            DeleteRow.deleteRow(connection, "zhouhengxin:student", "row5");
         } catch (IOException e) {
             e.printStackTrace();
         }
