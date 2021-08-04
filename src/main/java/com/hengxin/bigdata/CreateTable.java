@@ -5,6 +5,7 @@ import org.apache.hadoop.hbase.HTableDescriptor;
 import org.apache.hadoop.hbase.TableName;
 import org.apache.hadoop.hbase.client.Admin;
 import org.apache.hadoop.hbase.client.Connection;
+
 import java.io.IOException;
 import java.util.Arrays;
 
@@ -28,7 +29,7 @@ public class CreateTable {
             table.addFamily(columnDescriptor);
         }
         admin.createTable(table);
-        System.out.println("成功创建表 " + table + ", column family: "+ Arrays.toString(columnFamilies) );
+        System.out.println("成功创建表 " + table + ", column family: " + Arrays.toString(columnFamilies));
     }
 }
 
